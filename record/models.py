@@ -7,8 +7,6 @@ class Record(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    count = models.IntegerField()
-    tag_set = models.ManyToManyField('Tag', blank=True)
 
     class Meta:
         ordering = ['-id']
