@@ -1,1 +1,37 @@
--r requirements/prod.txt
+aiodns==3.0.0
+aiohttp==3.7.4.post0
+asgiref==3.4.1
+async-timeout==3.0.1
+attrs==21.2.0
+beautifulsoup4==4.10.0
+bs4==0.0.1
+ccxt==1.57.85
+certifi==2021.10.8
+cffi @ file:///opt/concourse/worker/volumes/live/506ff722-306a-4142-6379-cfea99aadbed/volume/cffi_1625814701363/work
+chardet==4.0.0
+charset-normalizer==2.0.6
+cryptography @ file:///opt/concourse/worker/volumes/live/aaebf160-6f21-467e-6bfa-1dd2605e4a9c/volume/cryptography_1635366587701/work
+Django==3.0.14
+django-bootstrap4==3.0.1
+django-debug-toolbar==3.2.2
+django-pydenticon==0.2
+idna==3.2
+lxml==4.6.3
+multidict==5.2.0
+mysqlclient==2.0.3
+numpy==1.21.2
+pandas==1.3.3
+Pillow==8.3.2
+pycares==4.0.0
+pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+pydenticon==0.3.1
+PyMySQL @ file:///opt/concourse/worker/volumes/live/91bc5664-f34a-482d-7efc-f19bbd7a1347/volume/pymysql_1610482895985/work
+python-dateutil==2.8.2
+pytz==2021.3
+requests==2.26.0
+six==1.16.0
+soupsieve==2.2.1
+sqlparse==0.4.2
+typing-extensions==3.10.0.2
+urllib3==1.26.7
+yarl==1.6.3
