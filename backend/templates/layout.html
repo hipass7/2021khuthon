@@ -31,21 +31,6 @@
                             <a class="p-2 text-dark" href="#">
                               <img src="#" class="rounded-circ le" style="width: 24px; height: 24px;" />
                             </a>
-                            <a class="p-2 text-dark" href="{% url "profile_edit" %}">
-                                {% if user.profile %}
-                                    <img src="{{ user.profile.url }}" style="width: 24px; height: 24px"/>
-{#                                {% else %}#}
-{#                                    <img src="{% url "pydenticon_image" user.username %}" style="width: 24px; height: 24px"/>#}
-                                {% endif %}
-
-{#                                <a class="p-2 text-dark" href="{% url "profile_edit" %}">#}
-{#                            <img src="{{ user.avatar_url }}" class="rounded-circle" style="width: 24px; height: 24px;" />#}
-{#                        </a>#}
-{#                        <a class="p-2 text-dark" href="{% url "profile_edit" %}">#}
-{#                          <img src="{{ user.avatar_url }}" class="rounded-circ le" style="width: 24px; height: 24px;" />#}
-{#                        </a>#}
-
-                            </a>
                         </nav>
                     </div>
                 </div>

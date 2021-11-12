@@ -4,11 +4,11 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <a href="localhost:8888" class="btn btn-primary">좋은 말 바른 말 시전!</a>
-                {% if user.is_trading %}
-                    <a href="locla" class="btn btn-primary">매매중지</a>
+
+                {% if user.check %}
+                    <a href="{% url "accounts:end" %}" class="btn btn-primary">좋은 말 바른 말 종료!</a>
                 {% else %}
-                    <a href="{% url "trading_bot:start_trading" %}" class="btn btn-primary">매매시작</a>
+                    <a href="{% url "accounts:start" %}" class="btn btn-primary">좋은 말 바른 말 시전!</a>
                 {% endif %}
             </div>
         </div>

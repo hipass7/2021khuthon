@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'trading',
+        'NAME': 'khuton',
         'USER': 'admin',
         'PASSWORD': 'khuminsung12!',
         'HOST': 'cryptocurrencydatabase.c5h79dp2k6f7.ap-northeast-2.rds.amazonaws.com',

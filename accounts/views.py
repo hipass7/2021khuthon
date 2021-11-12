@@ -54,3 +54,25 @@ def profile_edit(request):
     })
 
 
+@login_required
+def start(request):
+    messages.success(request, "녹음을 시작했습니다.")
+    redirect_url = request.META.get("HTTP_REFERER", "root")
+    user = request.user
+    user.check = True
+    user.save()
+
+    return redirect(redirect_url)
+
+@login_required
+def end(request):
+    messages.success(request, "녹음을 끝냅니다.")
+    redirect_url = request.META.get("HTTP_REFERER", "root")
+    user = request.user
+    user.check = False
+    user.save()
+
+    return redirect(redirect_url)
+
+
+
