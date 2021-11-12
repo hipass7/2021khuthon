@@ -1,0 +1,35 @@
+{% extends "record/layout.html" %}
+{% load bootstrap4 %}
+
+{% block title %}
+    record / record List
+{% endblock title %}
+
+{% block content %}
+    <script>
+    if (1 > 0) {
+        console.log("hello")
+    }
+    </script>
+    <form action="" method="get">
+        <input type="text" name="q" value="{{ q }}"/>
+        <input type="submit" value="검색"/>
+    </form>
+
+    <table>
+        <tbody>
+        {% for record in record_list %}
+            <tr>
+                <td>
+                    {{ record.created_at }}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+
+    {%  if is_paginated %}
+        {% bootstrap_pagination page_obj size="small" justify_content="center"%}
+    {% endif %}
+
+{%  endblock content %}

@@ -10,6 +10,19 @@
                 {% else %}
                     <a href="{% url "accounts:start" %}" class="btn btn-primary">좋은 말 바른 말 시전!</a>
                 {% endif %}
+
+                    <table>
+                        <tbody>
+                        {% for record in record_list %}
+                            <tr>
+                                <td>
+                                    {{ record.created_at }}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                    </table>
+
             </div>
         </div>
     </div>

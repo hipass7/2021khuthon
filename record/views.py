@@ -9,6 +9,7 @@ from .models import Record
 class RecordListView(ListView):
     model = Record
     paginate_by = 10
+    template_name = "record_list.html"
 
 record_list = RecordListView.as_view()
 
