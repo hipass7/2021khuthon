@@ -1,0 +1,113 @@
+
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>좋은 말 고운 말</title>
+    <link href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "bootstrap-4.4.1-dist/css/bootstrap.min.css" %}"/>
+    <script src="{% static "jquery-3.4.1.min.js" %}"></script>
+    <script src="{% static "jquery.form-3.51.0.min.js" %}"></script>
+    <script src="{% static "bootstrap-4.4.1-dist/js/bootstrap.min.js" %}"></script>
+
+</head>
+
+<body>
+    <div class="border-bottom mb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 bg-white">
+                        <h5 class="my-0 mr-md-auto font-weight-normal">
+                            <a href="{% url "root" %}">
+                              <img src="{% static "logos.png" %}" style="width: 50px; height: 50px;"/>
+                            </a>
+                        </h5>
+                        <nav class="my-2 my-md-0 mr-md-3">
+                            <a class="p-2 text-dark" href="#">
+                                <img src="{{ user.avatar_url }}" class="rounded-circle" style="width: 24px; height: 24px;" />
+                            </a>
+                            <a class="p-2 text-dark" href="#">
+                              <img src="#" class="rounded-circ le" style="width: 24px; height: 24px;" />
+                            </a>
+                            <a class="p-2 text-dark" href="{% url "profile_edit" %}">
+                                {% if user.profile %}
+                                    <img src="{{ user.profile.url }}" style="width: 24px; height: 24px"/>
+{#                                {% else %}#}
+{#                                    <img src="{% url "pydenticon_image" user.username %}" style="width: 24px; height: 24px"/>#}
+                                {% endif %}
+
+{#                                <a class="p-2 text-dark" href="{% url "profile_edit" %}">#}
+{#                            <img src="{{ user.avatar_url }}" class="rounded-circle" style="width: 24px; height: 24px;" />#}
+{#                        </a>#}
+{#                        <a class="p-2 text-dark" href="{% url "profile_edit" %}">#}
+{#                          <img src="{{ user.avatar_url }}" class="rounded-circ le" style="width: 24px; height: 24px;" />#}
+{#                        </a>#}
+
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {% block content %}
+    {% endblock %}
+
+<div class="border-top mt-3">
+
+<div class="container">
+<footer class="pt-4 my-md-5 pt-md-5">
+    <div class="row">
+      <div class="col-12 col-md">
+        <img class="mb-2" src="/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
+        <small class="d-block mb-3 text-muted">© 2017-2019</small>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Features</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Cool stuff</a></li>
+          <li><a class="text-muted" href="#">Random feature</a></li>
+          <li><a class="text-muted" href="#">Team feature</a></li>
+          <li><a class="text-muted" href="#">Stuff for developers</a></li>
+          <li><a class="text-muted" href="#">Another one</a></li>
+          <li><a class="text-muted" href="#">Last time</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>Resources</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Resource</a></li>
+          <li><a class="text-muted" href="#">Resource name</a></li>
+          <li><a class="text-muted" href="#">Another resource</a></li>
+          <li><a class="text-muted" href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md">
+        <h5>About</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="#">Team</a></li>
+          <li><a class="text-muted" href="#">Locations</a></li>
+          <li><a class="text-muted" href="#">Privacy</a></li>
+          <li><a class="text-muted" href="#">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</div>
+</div>
+
+</body>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert-alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+</html>

@@ -1,0 +1,16 @@
+{% extends "layout.html"%}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <a href="localhost:8888" class="btn btn-primary">좋은 말 바른 말 시전!</a>
+                {% if user.is_trading %}
+                    <a href="locla" class="btn btn-primary">매매중지</a>
+                {% else %}
+                    <a href="{% url "trading_bot:start_trading" %}" class="btn btn-primary">매매시작</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
