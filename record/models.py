@@ -13,6 +13,6 @@ class Record(models.Model):
 
 
 class Word(models.Model):
-    record = models.ForeignKey(Record, on_delete=models.CASCADE)  # post_id 필드가 생성이 됨.
+    record = models.ForeignKey(Record, on_delete=models.CASCADE)
     word = models.TextField()
     count = models.IntegerField()
